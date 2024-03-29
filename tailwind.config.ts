@@ -13,8 +13,38 @@ const config: Config = {
         "gradient-conic":
           "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
       },
+      colors: {
+        "one-digital": {
+          dark: "#202123",
+          light: "#F1F1F1",
+        },
+      },
+      fontFamily: {
+        'arial' : "'Arial-Regular ', Helvetica"
+      },
+      keyframes : {
+        "slide-in-top": {
+          "0%": {
+            transform: "translateY(-100%)",
+          },
+          "100%": {
+            transform: "translateY(0)",
+          },
+        },
+      },
+      animation: {
+        "slide-in-top": "slide-in-top 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both",
+      },
     },
   },
   plugins: [],
 };
 export default config;
+// @keyframes slide-in-top {
+//   0% {
+//     transform: translateY(-100%);
+//   }
+//   100% {
+//     transform: translateY(0);
+//   }
+// }

@@ -6,6 +6,5 @@ import trendBg from '../public/trendBannerbg.png'
 export  {
   arrow,
   curverArrow,
-  trendBg
+  trendBg,
 }
-

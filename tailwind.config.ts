@@ -17,6 +17,10 @@ const config: Config = {
         "one-digital": {
           dark: "#202123",
           light: "#F1F1F1",
+          sky:{
+            dark: "#004999",
+            light:"#0072FF"
+          },
         },
       },
       fontFamily: {

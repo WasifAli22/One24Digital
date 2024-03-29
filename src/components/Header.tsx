@@ -51,7 +51,7 @@ export const Header = (): JSX.Element => {
   const toggleMenu = () => setIsOpen(!isOpen);
 
   return (
-    <header className="flex w-screen flex-col justify-center items-center h-[113px] bg-one-digital-dark relative">
+    <header className="flex w-[100%] flex-col justify-center items-center h-[113px] bg-one-digital-dark relative">
       <div className={`flex w-full  justify-around ${!isOpen && "md:flex-row flex-row-reverse"} md:justify-center items-center px-4 md:px-8`}>
         {/* Logo */}
         <Link href="/" className="mr-4 md:mr-8">

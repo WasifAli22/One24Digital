@@ -46,7 +46,7 @@ const AnimatedText = ({ text }: { text: string }) => {
   };
 
   return (
-    <motion.div className={` md:px-0 sm:px-3 px-1 sm:text-[70px] text-[50px] md:text-[145px] text-center mt-24 font-extrabold text-white`}>
+    <motion.div className={` md:px-0 sm:px-3 px-1 sm:text-[70px] text-[50px] md:text-[145px] text-center top-0 font-extrabold text-white`}>
       {text.split("").map((char, index) => (
         <motion.span
           key={index}

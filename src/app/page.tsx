@@ -1,4 +1,9 @@
+
+import Image from "next/image";
+import TrendBanner from "@/components/TrendBanner"
+import Footer from "@/components/layout/Footer";
 import { Header , Banner, Compaign, TrendBanner } from "@/components";
+
 
 export default function Home() {
   return (
@@ -6,6 +11,7 @@ export default function Home() {
       <Banner />
       <Compaign />
       <TrendBanner />
+      <Footer/>
     </div>
   );
 }

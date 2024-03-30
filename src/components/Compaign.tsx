@@ -189,7 +189,7 @@ const Compaign = () => {
   // step 03 : remove pickup array from arrays of list
   // step 04 : repeat above process untill arrays of length 0
   return (
-    <div id="compaign" className="bg-one-digital-dark w-full">
+    <div id="compaign" className="bg-one-digital-dark w-full md:mt-[-100px] relative z-10">
       {/* Campaign grid section */}
       <div className=" md:max-w-[80%] sm:max-w-[88%] max-w-[96%] lg:max-w-[70%] flex mx-auto mt-[-38px] bg-one-digital-light py-7 px-6  ">
         <div className="px-20 text-xs font-medium uppercase text-one-digital-dark tracking-[5.04px] relative w-auto mt-[-1.00px] text-center leading-normal whitespace-nowrap">

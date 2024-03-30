@@ -25,9 +25,9 @@ const Banner = () => {
               repeat: Infinity,
               repeatType: "loop",
             }}
-            className='lg:col-span-6 col-span-12 lg:pt-0 pt-20 text-center'
+            className='lg:col-span-6 col-span-12 lg:pt-0 pt-12 text-center'
           >
-          <Link  href="#compaign">
+          <Link  href="#compaign" className='flex lg:block justify-center'>
             <Image src={arrow} alt="arrow" width={90} height={90} className="cursor-pointer" />
           </Link>
         </motion.div>
@@ -46,7 +46,7 @@ const AnimatedText = ({ text }: { text: string }) => {
   };
 
   return (
-    <motion.div className={` md:px-0 sm:px-3 px-1 sm:text-[70px] text-[50px] md:text-[145px] text-center top-0 font-extrabold text-white`}>
+    <motion.div className={` md:px-0 sm:px-3 px-1 sm:text-[70px] text-[50px] md:text-[145px] text-center top-0 pt-10 font-extrabold text-white`}>
       {text.split("").map((char, index) => (
         <motion.span
           key={index}

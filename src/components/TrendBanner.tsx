@@ -30,7 +30,7 @@ const AnimatedText: React.FC<AnimatedTextProps> = ({ text }) => {
         initial={{ opacity: 0, x: -20 }}
         animate={{ opacity: 1, x: 0 }}
         transition={{ duration: 0.5 }}
-        className="lg:text-[145px] text-5xl lg:text-left py-24 font-extrabold text-white"
+        className="lg:text-[145px] text-5xl lg:text-center py-24 px-5 font-extrabold text-white"
       >
         {visibleText}
       </motion.h1>

@@ -17,11 +17,14 @@ const Banner = () => {
           <Image src={curverArrow} alt="arrow" width={206} height={197} />
         </div>
         <motion.div
-            initial={{ y: -20, opacity: 0 }}
-            animate={{ y: 0, opacity: 1 }}
-            transition={{ type: 'spring', stiffness: 100, damping: 10 }}
-            whileHover={{ scale: 1.1, transition: { duration: 0.2 }, cursor: 'pointer' }}
-            whileInView={{ scale: 1.1, y: [0, -10, 0], transition: { duration: 1, repeat: Infinity } }}
+            animate={{
+              y: [0, 24, 0],
+            }}
+            transition={{
+              duration: 1.5,
+              repeat: Infinity,
+              repeatType: "loop",
+            }}
             className='lg:col-span-6 col-span-12 lg:pt-0 pt-20 text-center'
           >
           <Link  href="#compaign">

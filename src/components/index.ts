@@ -1,9 +1,10 @@
 import { Header } from "./Header";
 import Banner from "./Banner";
 import Compaign from "./Compaign";
+import TrendBanner from "./TrendBanner";
 
 
-export { Header, Banner, Compaign }
+
 
 export const footerData = [
     {
@@ -83,3 +84,7 @@ export const footerInstructions = [
         text: "Information presented on this website is for educational purposes only and should not be treated as legal, financial or any other form of advice. Pvt Ltd is not liable for financial or other any other form of loss incurred by the user or any affiliated party on the basis of information provided herein."
     }
 ]
+
+export { Header, Banner, Compaign, TrendBanner }
+
+

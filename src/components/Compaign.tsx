@@ -173,7 +173,7 @@ const arrangeImages = (images: any[]) => {
 const Compaign = () => {
   const imageGrid = arrangeImages(testImages);
   const [threeImagesRow, setThreeImagesRow] = useState<any[][]>([]);
-  console.log(imageGrid);
+//   console.log(imageGrid);
 
   const progressCircle = useRef<SVGSVGElement>(null);
   const progressContent = useRef<HTMLSpanElement>(null);

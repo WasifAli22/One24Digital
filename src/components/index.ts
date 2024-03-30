@@ -1,8 +1,8 @@
-import { Header } from "./Header";
+import { Header } from "./layout/Header";
 import Banner from "./Banner";
 import Compaign from "./Compaign";
 import TrendBanner from "./TrendBanner";
-
+import  Footer  from "./layout/Footer";
 
 
 
@@ -85,6 +85,6 @@ export const footerInstructions = [
     }
 ]
 
-export { Header, Banner, Compaign, TrendBanner }
+export { Header, Banner, Compaign, TrendBanner, Footer }
 
 

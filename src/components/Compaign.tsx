@@ -93,12 +93,24 @@ interface ImageData {
 }
 const testImages : ImageData[] =  [
     {
-        src: compaign04,
+        src: compaign01,
         alt: 'compaign1'
     },
     {
-        src: compaign05,
+        src: compaign02,
         alt: 'compaign2'
+    },
+    {
+        src: compaign03,
+        alt: 'compaign3'
+    },
+    {
+        src: compaign04,
+        alt: 'compaign3'
+    },
+    {
+        src: compaign05,
+        alt: 'compaign3'
     },
     {
         src: compaign06,
@@ -106,19 +118,35 @@ const testImages : ImageData[] =  [
     },
     {
         src: compaign07,
-        alt: 'compaign3'
+        alt: 'compaign7'
     },
     {
         src: compaign08,
-        alt: 'compaign3'
+        alt: 'compaign8'
     },
     {
         src: compaign09,
-        alt: 'compaign3'
+        alt: 'compaign9'
     },
     {
         src: compaign10,
-        alt: 'compaign3'
+        alt: 'compaign10'
+    },
+    {
+        src: compaign11,
+        alt: 'compaign11'
+    },
+    {
+        src: compaign12,
+        alt: 'compaign12'
+    },
+    {
+        src: compaign13,
+        alt: 'compaign13'
+    },
+    {
+        src: compaign14,
+        alt: 'compaign14'
     }
 ]
 

@@ -1,12 +1,12 @@
+"use client"
 import React from 'react'
 import { footerData, footerInstructions } from '../index'
 import { BsLinkedin, BsFacebook } from "react-icons/bs";
 import Link from 'next/link';
 
-
 const Footer = () => {
-    return (
-        <div className="px-10 lg:px-20">
+  return (
+    <div className="px-10  lg:px-20 ">
             <div className="md:pt-20 md:pb-0 py-10 ">
                 <div className='grid grid-cols-12 pb-10 lg:px-40'>
                     {footerData.map((data, index) => (
@@ -75,7 +75,7 @@ const Footer = () => {
 
             </div>
         </div>
-    )
+  )
 }
 
 export default Footer

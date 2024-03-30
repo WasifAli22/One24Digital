@@ -211,9 +211,8 @@ const Compaign = () => {
         navigation={false}
         modules={[Autoplay, Pagination, Navigation]}
         onAutoplayTimeLeft={onAutoplayTimeLeft}
-        className={`mySwiper hover:cursor-pointer hover:swiper-button-prev hover:swiper-button-next`}
+        className={`mySwiper overflow-hidden hover:cursor-pointer hover:swiper-button-prev hover:swiper-button-next`}
       >
-        {/* I want to implement logic having my container recieving 3 and 4 images  */}
         {imageGrid.map((imageData, subIndex) => imageData.length === 3 ? (
           <SwiperSlide key={subIndex}><Slide key={subIndex} images={imageData} /></SwiperSlide>
         ):(

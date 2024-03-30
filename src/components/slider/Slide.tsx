@@ -39,16 +39,16 @@ export const slideIn = (
 
   const Slide: React.FC<Props> = ({ images, reverse = false, banner = false }) => {
     return (
-        <div>
+        <div className=''>
             {/* Displaying slides with three images each, adjusted for screen size */}
             {images.length === 3 && !banner && (
-                <motion.div className="grid overflow-hidden w-full max-h-screen grid-cols-12">
+                <motion.div className="grid  max-h-screen grid-cols-12">
                     {/* Conditionally rendering based on the reverse flag */}
                     {reverse ? (
                         <>
                             {/* Displaying third image */}
                             <motion.div variants={slideIn("right", "tween", 0.2, 1)} initial="hidden" whileInView="show" viewport={{ once: true, amount: 0.25 }} className="col-span-5 overflow-hidden">
-                                <Image src={images[2].src} alt={images[2].alt} width={500} height={500} className="max-h-[800px] object-cover w-full" />
+                                <Image src={images[2].src} alt={images[2].alt} width={500} height={500} className="max-h-[800px]  object-cover w-full" />
                             </motion.div>
                             {/* Displaying first two images */}
                             <motion.div variants={slideIn("left", "tween", 0.2, 1)} initial="hidden" whileInView="show" viewport={{ once: true, amount: 0.25 }} className="col-span-7 overflow-hidden">
@@ -62,15 +62,18 @@ export const slideIn = (
                     ) : (
                         <>
                             {/* Displaying first two images */}
-                            <motion.div variants={slideIn("right", "tween", 0.2, 1)} initial="hidden" whileInView="show" viewport={{ once: true, amount: 0.25 }} className="overflow-hidden col-span-7">
+                            <motion.div 
+                                variants={slideIn("right", "tween", 0.2, 1)} 
+                                initial="hidden" whileInView="show" viewport={{ once: true, amount: 0.25 }} 
+                                className="bg-red-200 col-span-7">
                                 {images.slice(0, 2).map((imageData, index) => (
                                     <div key={index} className="flex flex-col">
-                                        <Image src={imageData.src} alt={imageData.alt} width={500} height={500} className="max-h-[400px] object-cover w-auto" />
+                                        <Image src={imageData.src} alt={imageData.alt} width={500} height={500} className="max-h-[400px] overflow-hidden object-cover w-auto" />
                                     </div>
                                 ))}
                             </motion.div>
                             {/* Displaying third image */}
-                            <motion.div variants={slideIn("left", "tween", 0.3, 1)} initial="hidden" whileInView="show" viewport={{ once: true, amount: 0.25 }} className="col-span-5 overflow-hidden">
+                            <motion.div variants={slideIn("right", "tween", 0.2, 1)} initial="hidden" whileInView="show" viewport={{ once: true, amount: 0.25 }} className="col-span-5 overflow-hidden">
                                 <Image src={images[2].src} alt={images[2].alt} width={500} height={500} className="max-h-[800px] object-cover w-full" />
                             </motion.div>
                         </>
@@ -108,8 +111,8 @@ export const slideIn = (
                     <>
                         <div className="max-h-screen w-auto flex flex-col">
                             {images.slice(0, 1).map((imageData, index) => (
-                                <motion.div key={index} className="w-[100%] overflow-hidden" variants={slideIn("up", "tween", 0.2, 1)} initial="hidden" whileInView="show" viewport={{ once: true, amount: 0.25 }}>
-                                    <Image src={imageData.src} alt={imageData.alt} width={700} height={700} className="max-h-[300px] w-[100%] object-center" />
+                                <motion.div key={index} className="w-[100%] " variants={slideIn("up", "tween", 0.2, 1)} initial="hidden" whileInView="show" viewport={{ once: true, amount: 0.25 }}>
+                                    <Image src={imageData.src} alt={imageData.alt} width={700} height={700} className="max-h-[400px] object-cover w-[100%] object-center" />
                                 </motion.div>
                             ))}
                             <motion.div 

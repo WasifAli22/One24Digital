@@ -45,7 +45,7 @@ const TrendBanner: React.FC = () => {
      initial="hidden"
      whileInView={"show"}
      viewport={{ once: true, amount: 0.25 }}
-     className="min-h-screen text-center h-screen w-full bg-cover" style={{ backgroundImage: `url('/trendBannerbg.png')` }}>
+     className="min-h-screen  text-center h-screen w-full bg-cover" style={{ backgroundImage: `url('/trendBannerbg.png')` }}>
       {/* Content */}
       <AnimatedText text="We don't follow. We set trends." />
     </motion.div>

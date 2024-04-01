@@ -1,7 +1,7 @@
 
 import React from 'react'
-import ServicesBanner from '@/components/ServicesBanner'
-import OurServicesCard from '@/components/OurServices'
+import ServicesBanner from '@/components/services/ServicesBanner'
+import OurServicesCard from '@/components/services/OurServices'
 
 const Services = () => {
     return (

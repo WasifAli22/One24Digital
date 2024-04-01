@@ -1,7 +1,7 @@
 "use client"
 import React from "react";
-import OurServices from "@/components/OurServices";
-import PortfolioBanner from "@/components/PortfolioBanner";
+import PortfolioBanner from "@/components/portfolio/PortfolioBanner";
+import PortfolioCard from "@/components/portfolio/PortfolioCard";
 
 const Portfolio = () => {
   return (
@@ -10,7 +10,7 @@ const Portfolio = () => {
         background={{ color: 'red' }}
         text={<span>Explore Our Portfolio Or <br /> <span className="italic font-bold">Recent Work.</span></span>}
       />
-      <OurServices />
+      <PortfolioCard />
     </div>
   );
 };

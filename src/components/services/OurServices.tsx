@@ -1,6 +1,6 @@
 import Link from 'next/link'
 import React from 'react'
-import { ServicesData } from '.'
+import { ServicesData } from '..'
 const OurServicesCard = () => {
    
 

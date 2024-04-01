@@ -8,7 +8,7 @@ const Skeleton = () => {
 };
 
 // Component fetching data
-const AsyncOurServices = React.lazy(() => import('./OurServices'));
+const AsyncOurServices = React.lazy(() => import('./services/OurServices'));
 
 const OurServicesWithSkeleton = () => {
   return (

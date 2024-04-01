@@ -1,11 +1,17 @@
-import OurServices from '@/components/OurServices'
-import React from 'react'
 
+import React from 'react'
+import ServicesBanner from '@/components/ServicesBanner'
+import OurServicesCard from '@/components/OurServices'
 
 const Services = () => {
     return (
         <div>
-            <OurServices />
+            <ServicesBanner
+                background={{ color: 'red' }}
+                text={<span>Explore Our Services & <br /> <span className="italic font-bold">Transform Your Business.</span></span>}
+            />
+
+            <OurServicesCard />
         </div>
     )
 }

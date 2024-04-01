@@ -2,6 +2,7 @@
 import Image from "next/image";
 import Footer from "@/components/layout/Footer";
 import { Header , Banner, Compaign, TrendBanner } from "@/components";
+import LogoCarousel from "@/components/LogosCarasuel";
 
 
 
@@ -11,7 +12,7 @@ export default function Home() {
       <Banner />
       <Compaign />
       <TrendBanner />
-      {/* <Footer/> */}
+      <LogoCarousel />
     </div>
   );
 }

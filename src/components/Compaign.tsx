@@ -191,12 +191,14 @@ const Compaign = () => {
   return (
     <div id="compaign" className="bg-one-digital-dark w-full md:mt-[-100px] relative z-10">
       {/* Campaign grid section */}
-      <div className=" md:max-w-[80%] sm:max-w-[88%] max-w-[96%] lg:max-w-[70%] flex mx-auto mt-[-38px] bg-one-digital-light py-7 px-6  ">
-        <div className="px-20 text-xs font-medium uppercase text-one-digital-dark tracking-[5.04px] relative w-auto mt-[-1.00px] text-center leading-normal whitespace-nowrap">
-          <span className="border-b-2 pb-1 border-one-digital-dark">Com</span>
-          paign
+     <div className="w-full z-50 md:max-w-[80%] sm:max-w-[88%] max-w-[96%] lg:max-w-[70%] flex mx-auto relative items-center bg-red-300   ">
+        <div className=" absolute w-full flex mx-auto top-auto md:top-[-40px] left-auto md:left-[45px] bg-one-digital-light py-7 px-6  ">
+            <div className="px-20 text-xs font-medium uppercase text-one-digital-dark tracking-[5.04px] relative w-auto mt-[-1.00px] text-center leading-normal whitespace-nowrap">
+            <span className="border-b-2 pb-1 border-one-digital-dark">Com</span>
+            paign
+            </div>
         </div>
-      </div>
+     </div>
       {/* use swider to slide images */}
       <Swiper
         spaceBetween={30}
@@ -206,7 +208,7 @@ const Compaign = () => {
           disableOnInteraction: false,
         }}
         pagination={{
-          clickable: true,
+          clickable: false,
         }}
         navigation={false}
         modules={[Autoplay, Pagination, Navigation]}
@@ -218,12 +220,12 @@ const Compaign = () => {
         ):(
             <SwiperSlide key={subIndex}><Slide key={subIndex} images={imageData} /></SwiperSlide>
         ))}
-        <div className="autoplay-progress" slot="container-end" >
+        {/* <div className="autoplay-progress" slot="container-end" >
           <svg viewBox="0 0 48 48" ref={progressCircle} >
             <circle cx="24" cy="24" className='stroke-white' r="20"></circle>
           </svg>
           <span ref={progressContent} className='text-white'></span>
-        </div>
+        </div> */}
       </Swiper>
      
       

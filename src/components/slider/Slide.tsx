@@ -37,7 +37,8 @@ export const slideIn = (
     };
   };
 
-  const Slide: React.FC<Props> = ({ images, reverse = false, banner = false }) => {
+const Slide: React.FC<Props> = ({ images, reverse = false, banner = false }) => {
+    
     return (
         <div className=''>
             {/* Displaying slides with three images each, adjusted for screen size */}

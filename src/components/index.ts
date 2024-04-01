@@ -3,6 +3,7 @@ import Banner from "./Banner";
 import Compaign from "./Compaign";
 import TrendBanner from "./TrendBanner";
 import  Footer  from "./layout/Footer";
+import { RotatingBlinker } from "./layout/CursorBlinker";
 
 
 
@@ -85,6 +86,6 @@ export const footerInstructions = [
     }
 ]
 
-export { Header, Banner, Compaign, TrendBanner, Footer }
+export { Header, Banner, Compaign, TrendBanner, Footer, RotatingBlinker }
 
 

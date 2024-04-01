@@ -2,6 +2,17 @@
 @tailwind components;
 @tailwind utilities;
 
+
+@layer base {
+  h1 {
+    @apply md:text-6xl sm:text-5xl text-4xl leading-[80px] lg:text-7xl font-medium;
+  }
+  p {
+    @apply md:text-xl sm:text-lg text-base leading-[24px] text-[#595959] lg:text-xl font-medium;
+  }
+}
+
+
 .services_bg_image:before {
   content: "";
   position: absolute;
@@ -107,3 +118,40 @@
     height: 90%; /* Adjust as needed */
   }
 }
+.swiper-pagination-bullets {
+  display: none;
+}
+.cursor-blink {
+  animation: blink 1s step-end infinite;
+}
+
+@keyframes blink {
+  50% {
+    opacity: 0;
+  }
+}
+/* Custom Marquee Styles */
+
+.my-custom-content {
+  font-size: 16px;
+  color: #333;
+  animation: marquee-left var(--duration, 70s) linear infinite !important; /* Adjust the duration (10s) for slower speed */
+}
+.my-custom-content:hover {
+  animation-play-state: paused !important;
+}
+
+
+@keyframes marquee-left {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+
+
+/* animation: marquee-left var(--duration, 400s) linear infinite; */
+

@@ -2,7 +2,7 @@ import { Header } from "./layout/Header";
 import Banner from "./Banner";
 import Compaign from "./Compaign";
 import TrendBanner from "./TrendBanner";
-import  Footer  from "./layout/Footer";
+import Footer from "./layout/Footer";
 
 
 
@@ -88,3 +88,39 @@ export const footerInstructions = [
 export { Header, Banner, Compaign, TrendBanner, Footer }
 
 
+export const ServicesData = [
+    {
+        id: 1,
+        title: 'Walter The Cat',
+        description: 'Chevrolet Silverado',
+        IcludedAgency: "McCann New York",
+        src: '/work/work1.jpg',
+        details: "In honor of International Womens Day 2017, we partnered with State Street Global Advisors to introduce the Fearless Girl to the world — a statue of a daring young girl, standing strong on Wall Street. Why? Because companies with women in leadership perform better. The Fearless Girl was dropped on Wall Street in the middle of the night and became a global phenomenon within 24 hours."
+    },
+    {
+        id: 2,
+        title: 'Changing The Game',
+        description: 'Xbox Adaptive Controller',
+        src: '/work/work2.jpg',
+        IcludedAgency: "McCann New York",
+        details: "In andd of International Womens Day 2017, we partnered with State Street Global Advisors to introduce the Fearless Girl to the world — a statue of a daring young girl, standing strong on Wall Street. Why? Because companies with women in leadership perform better. The Fearless Girl was dropped on Wall Street in the middle of the night and became a global phenomenon within 24 hours."
+
+    },
+    {
+        id: 3,
+        title: 'ADLaM',
+        description: 'Microsoft Office 365',
+        IcludedAgency: "McCann ",
+        src: '/work/work3.jpg',
+        details: "In of International Womens Day 2017, we partnered with State Street Global Advisors to introduce the Fearless Girl to the world — a statue of a daring young girl, standing strong on Wall Street. Why? Because companies with women in leadership perform better. The Fearless Girl was dropped on Wall Street in the middle of the night and became a global phenomenon within 24 hours."
+
+    },
+    {
+        id: 4,
+        title: 'Heinzjack',
+        IcludedAgency: "McCann london York",
+        description: 'The Kraft Heinz Company',
+        src: '/work/work4.jpg',
+        details: "In sss of International Womens Day 2017, we partnered with State Street Global Advisors to introduce the Fearless Girl to the world — a statue of a daring young girl, standing strong on Wall Street. Why? Because companies with women in leadership perform better. The Fearless Girl was dropped on Wall Street in the middle of the night and became a global phenomenon within 24 hours."
+    }
+]

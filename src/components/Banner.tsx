@@ -13,7 +13,7 @@ const Banner = () => {
       {/* Banner section */}
       <AnimatedText text={`We help brands think differently`} />
       <div className="grid mt-8 grid-cols-12 mx-28">
-        <div className="lg:col-span-6 hidden md:block col-span-4 text-left">
+        <div className="lg:col-span-6 mt-[-30px] hidden md:block col-span-4 text-left">
           <Image src={curverArrow} alt="arrow" width={206} height={197} />
         </div>
         <motion.div

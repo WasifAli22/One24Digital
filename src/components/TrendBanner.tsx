@@ -26,14 +26,14 @@ const AnimatedText: React.FC<AnimatedTextProps> = ({ text }) => {
 
   return (
     <motion.div className="flex items-center justify-center m-auto text-center">
-      <motion.h1
+      <motion.h2
         initial={{ opacity: 0, x: -20 }}
         animate={{ opacity: 1, x: 0 }}
         transition={{ duration: 0.5 }}
         className="lg:text-[145px] text-5xl lg:text-center py-24 px-5 font-extrabold text-white"
       >
         {visibleText}
-      </motion.h1>
+      </motion.h2>
     </motion.div>
   );
 };

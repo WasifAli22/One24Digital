@@ -27,7 +27,7 @@ const Banner = () => {
             }}
             className='lg:col-span-6 col-span-12 lg:pt-0 pt-12 text-center'
           >
-          <Link  href="#compaign" className='flex lg:block justify-center'>
+          <Link  href="#compaign" className='flex lg:block'>
             <Image src={arrow} alt="arrow" width={90} height={90} className="cursor-pointer" />
           </Link>
         </motion.div>

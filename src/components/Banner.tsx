@@ -6,35 +6,29 @@ import Link from "next/link";
 import { bannerData } from "./dummydata";
 
 const Banner = () => {
-  
-
-  const hasImage = bannerData?.background?.bgImg;
-
+  const hasImage = bannerData?.background?.bgImg && bannerData.background.bgImg !== "";
 
   return (
     <div
-      className={`flex-col inset-0 items-center  object-cover mx-auto min-h-[600px] lg:min-h-[800px] w-full 
-        ${
-          hasImage ? `bg-cover bg-center` : `bg-${bannerData.background.bgColor.dark}`
-        }
-      `}
+      className={`flex-col inset-0 items-center object-cover mx-auto min-h-[600px] lg:min-h-[800px] w-full`}
       style={{
-        backgroundImage: hasImage
-          ? `url(${bannerData.background.bgImg})`
-          : "none",
+        backgroundImage: hasImage ? `url(${bannerData.background.bgImg})` : "none",
+        backgroundColor: hasImage ? "transparent" : bannerData.background.bgColor.dark,
+        backgroundSize: hasImage ? "cover" : "auto",
+        backgroundPosition: hasImage ? "center" : "auto",
       }}
     >
       <AnimatedText text={bannerData.animeText} />
       <div className="grid mt-8 grid-cols-12 mx-28">
-        <div className="lg:col-span-6 mt-[-30px] hidden md:block col-span-4 text-left">
-          {hasImage && (
+        <div className="lg:col-span-6 mt-[-30px] hidden md:block z-10 col-span-4 text-left">
+          {/* {hasImage ||  ( */}
             <Image
               src={bannerData.curveArrow.url}
               alt={bannerData.curveArrow.alt}
               height={bannerData.curveArrow.h}
               width={bannerData.curveArrow.w}
             />
-          )}
+          {/* )} */}
         </div>
         <motion.div
           animate={{
@@ -63,6 +57,8 @@ const Banner = () => {
 };
 
 export default Banner;
+
+
 
 const AnimatedText = ({ text }: { text: string }) => {
   const charVariants = {

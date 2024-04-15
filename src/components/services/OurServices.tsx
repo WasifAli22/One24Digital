@@ -1,12 +1,19 @@
+"use client"
 import Link from 'next/link'
-import React from 'react'
+import React, { useState } from 'react'
 import { ServicesData } from '..'
+
 const OurServicesCard = () => {
-   
+    const [showMore, setShowMore] = useState(false);
+    const initialDisplayCount = 4;
+
+    const toggleShowMore = () => {
+        setShowMore(!showMore);
+    };
 
     return (
         <div className='grid grid-cols-12'>
-            {ServicesData.map((project) => (
+            {ServicesData.slice(0, showMore ? ServicesData.length : initialDisplayCount).map((project) => (
                 <div key={project.id} className='relative lg:col-span-6 col-span-12 overflow-hidden'>
                     <Link href={`/services/${encodeURIComponent(project.title.toLowerCase().replace(/\s+/g, '-'))}`}>
                         <div className="services_bg_image min-h-[300px] lg:min-h-[500px] w-full bg-no-repeat bg-center bg-cover hover:cursor-pointer hover:scale-125 transition-all duration-700" style={{ backgroundImage: `url('${project.src}')` }}>
@@ -18,6 +25,13 @@ const OurServicesCard = () => {
                     </Link>
                 </div>
             ))}
+            {ServicesData.length > initialDisplayCount && (
+                <div className="col-span-12 text-center">
+                    <button onClick={toggleShowMore} className="mt-10 px-4 py-2 bg-red-500 text-white rounded-md">
+                        {showMore ? "Show Less" : "Show More"}
+                    </button>
+                </div>
+            )}
         </div>
     )
 }

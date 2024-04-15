@@ -78,7 +78,7 @@ import  {
     Welspun
 } from "../../public/clients"
 
-const clientsData = [
+export const clientsData = [
     { url: Greetwhite, alt: 'Greetwhite' },
     { url: GreenPanel, alt: 'GreenPanel' },
     { url: Greenply, alt: 'Greenply' },
@@ -158,5 +158,10 @@ const clientsData = [
     { url: Wavin, alt: 'wavin' },
     { url: Welspun, alt: 'Welspun' },
 ];
+export const morqueData = {
+    title: "All our \n major clients",
+    description:
+      "Let's redefine your digital destiny.Break the Mold, dominate the market. \n Turning clicks into loyal fans.",
+    clientsData: clientsData,
+  };
 
-export default clientsData;

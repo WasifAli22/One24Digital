@@ -2,10 +2,13 @@
 import React, { ReactNode, useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import { textVariant } from "@/app/utils/motion";
+import { trendsData } from "./dummydata";
 
 interface AnimatedTextProps {
   text: string;
 }
+
+
 
 const AnimatedText: React.FC<AnimatedTextProps> = ({ text }) => {
   const [visibleText, setVisibleText] = useState("");
@@ -45,22 +48,25 @@ const TrendBanner: React.FC = () => {
       initial="hidden"
       whileInView={"show"}
       viewport={{ once: true, amount: 0.25 }}
-      className="min-h-screen flex flex-col items-center mx-auto text-center h-screen w-full bg-cover"
-      style={{ backgroundImage: `url('/trendBannerbg.png')` }}
+      className="min-h-screen bg-fixed flex flex-col items-center mx-auto text-center h-screen w-full bg-cover"
+      style={{ backgroundImage: `url('${trendsData?.bgImg}')` }}
     >
       {/* Content */}
       <div className="flex pt-[30px] items-center justify-center m-auto text-center">
-        <motion.h1 
-         variants={textVariant(0.3)}
-         initial="hidden"
-         whileInView={"show"}
-        //  viewport={{ once: true, amount: 0.25 }}
+        <motion.h1
+          variants={textVariant(0.3)}
+          initial="hidden"
+          whileInView={"show"}
+          //  viewport={{ once: true, amount: 0.25 }}
 
-         className="lg:text-[110px]  text-3xl lg:text-center  px-5 font-extrabold text-white">
-          <span className="">We don&apos;t follow.</span>
+          className="lg:text-[110px]  text-3xl lg:text-center  px-5 font-extrabold text-white"
+        >
+          <span className="">{trendsData?.heading}</span>
         </motion.h1>
       </div>
-      <AnimatedText text="We set trends." />
+      <>
+        <AnimatedText text={trendsData?.animatedText} />
+      </>
     </motion.div>
   );
 };

@@ -17,7 +17,7 @@ const PortfolioBanner = ({ background, text }:any) => {
         <div className='min-h-screen h-screen w-[100%] bg-cover bg-center' style={dynamicStyles}>
             {/* Content */}
             <div className='flex items-center justify-center m-auto text-center'>
-                <h1 className='lg:text-[115px] text-5xl lg:text-center pt-24 font-extrabold text-white'> 
+                <h1 className='lg:text-[115px] text-5xl lg:text-center md:pt-24 pt-2 font-extrabold text-white'> 
                     {text}
                 </h1>
             </div>

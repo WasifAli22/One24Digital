@@ -28,7 +28,7 @@ const AnimatedText: React.FC<AnimatedTextProps> = ({ text }) => {
   }, [text, index]);
 
   return (
-    <motion.div className="flex items-center  mx-auto justify-center m-auto text-center">
+    <motion.div className="flex items-center  mx-auto justify-center mb-0 m-auto text-center">
       <motion.h2
         initial={{ opacity: 0, x: -20 }}
         animate={{ opacity: 1, x: 0 }}
@@ -48,25 +48,26 @@ const TrendBanner: React.FC = () => {
       initial="hidden"
       whileInView={"show"}
       viewport={{ once: true, amount: 0.25 }}
-      className="min-h-screen bg-fixed flex flex-col items-center mx-auto text-center h-screen w-full bg-cover"
+      className="min-h-screen bg-fixed flex flex-col items-center mx-auto text-center w-full bg-cover"
       style={{ backgroundImage: `url('${trendsData?.bgImg}')` }}
     >
+      <>
+        <AnimatedText text={trendsData?.animatedText} />
+      </>
       {/* Content */}
-      <div className="flex pt-[30px] items-center justify-center m-auto text-center">
+      <div className="flex pt-[30px] items-center justify-center mt-10 m-auto text-center">
         <motion.h1
           variants={textVariant(0.3)}
           initial="hidden"
           whileInView={"show"}
           //  viewport={{ once: true, amount: 0.25 }}
 
-          className="lg:text-[110px]  text-3xl lg:text-center  px-5 font-extrabold text-white"
+          className="lg:text-[110px] text-3xl lg:text-center  px-5 font-extrabold text-white"
         >
           <span className="">{trendsData?.heading}</span>
         </motion.h1>
       </div>
-      <>
-        <AnimatedText text={trendsData?.animatedText} />
-      </>
+      
     </motion.div>
   );
 };

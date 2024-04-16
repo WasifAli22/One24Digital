@@ -33,7 +33,7 @@ const MorqueLogos = ({ morqueData }: { morqueData: Client[] }) => {
                   alt={currentClient.alt}
                   width={200}
                   height={200}
-                  className="h-[40px] w-[40px] object-contain object-center translate-y-4 rounded-[8px] bg-white drop-shadow-lg transform "
+                  className="h-[60px] w-[60px] object-contain object-center translate-y-4 rounded-[8px] bg-white drop-shadow-lg transform "
                 />
               );
             })}

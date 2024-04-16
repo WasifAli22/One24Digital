@@ -68,7 +68,7 @@ export const Header = (): JSX.Element => {
         <ul className="hidden md:flex ">
            {menuLi.map(menu => (
              <li key={menu.id} className="items-start pt-[36.33px] pb-[36.34px] px-[25px] relative flex-[0_0_auto]">
-                <Link  href={menu.path} className="text-xs hover:text-sky-400 tracking-[5.04px] relative w-fit mt-[-1.00px] [font-family:'Arial-Regular',Helvetica] font-normal text-white text-center leading-[normal] whitespace-nowrap">
+                <Link  href={menu.path} className="text-xs hover:text-sky-400 hover:pb-4 transition-all ease-in-out duration-150 hover:border-b-2 hover:border-sky-400 tracking-[5.04px] relative w-fit mt-[-1.00px] [font-family:'Arial-Regular',Helvetica] font-normal text-white text-center leading-[normal] whitespace-nowrap">
                     {menu.name}
                 </Link>
              </li>
@@ -88,7 +88,7 @@ export const Header = (): JSX.Element => {
       {isOpen && (
         <div className=" text-start animate-slide-in-top duration-300 ease-in-out  absolute top-full left-0  w-full bg-one-digital-dark px-4 py-8 md:hidden">
           {menuLi.map((item) => (
-            <Link onClick={toggleMenu} key={item.id} href={item.path} className=" hover:text-sky-400 hover:ease-in-out text-[14px] hover:text-[16px] duration-200 delay-50 block  mx-auto max-w-[100%] sm:max-w-[68%] text-white text-base font-medium py-2 hover:text-opacity-75">
+            <Link onClick={toggleMenu} key={item.id} href={item.path} className=" hover:text-sky-400 hover:pb-4 transition-all ease-in-out hover:border-b-2 hover:border-sky-400 hover:ease-in-out text-[14px] hover:text-[16px] duration-200 delay-50 block  mx-auto max-w-[100%] sm:max-w-[68%] text-white text-base font-medium py-2 hover:text-opacity-75">
               {item.name}
             </Link>
           ))}

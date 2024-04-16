@@ -24,7 +24,7 @@ export const bannerData = {
     bgColor: {
       dark: "#004999", // gradient color made from dark-blue to dark-light
     },
-    bgImg: "/trendBannerbg.png", // optional image if present then it shows
+    bgImg: "", // optional image if present then it shows
   },
   curveArrow: {
     url: curverArrow, // Replace with the actual path

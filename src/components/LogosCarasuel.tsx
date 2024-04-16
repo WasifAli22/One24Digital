@@ -21,7 +21,7 @@ const ClientCarousel = () => {
             variants={textVariant(0.2)}
             initial="hidden"
             whileInView={"show"}
-            className=" md:text-6xl sm:text-5xl text-4xl leading-[80px] lg:text-7xl font-mediu md:pb-3 sm:pb-2 pb-1 lg:pb-4"
+            className=" md:text-6xl sm:text-5xl text-4xl font-semibold leading-[80px] lg:text-7xl font-mediu md:pb-3 sm:pb-2 pb-1 lg:pb-4"
           >
             {morqueData?.title.split("\n").map((line, index) => (
               <React.Fragment key={index}>

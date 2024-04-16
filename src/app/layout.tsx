@@ -7,9 +7,21 @@ const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "Digital by one24",
-  description: "one24-digital is a digital agency that provides high-quality digital services.",
+  description:
+    "one24-digital is a digital agency that provides high-quality digital services.",
+  icons: {
+    icon: [
+      {
+        url: "/company-logos/One24OS-trans.png",
+        media: "(prefers-color-scheme: light)",
+      },
+      {
+        url: "/company-logos/One24OS-trans.png",
+        media: "(prefers-color-scheme: dark)",
+      },
+    ],
+  },
 };
-
 
 export default function RootLayout({
   children,
@@ -19,9 +31,9 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={inter.className}>
-          <Header />
-          {children}
-          <Footer />
+        <Header />
+        {children}
+        <Footer />
       </body>
     </html>
   );

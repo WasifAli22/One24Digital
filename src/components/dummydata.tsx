@@ -42,15 +42,8 @@ export const bannerData = {
     },
   },
 };
-interface ImageData {
-  src: string | any;
-  alt: string;
-}
-interface Data {
-  title: string;
-  images: ImageData[];
-}
-export const testImages: Data = {
+
+export const testImages = {
   title: "campaign",
   images: [
     {
@@ -111,13 +104,14 @@ export const testImages: Data = {
     },
   ],
 };
-interface TrendsBanner {
-  heading: string;
-  animatedText: string;
-  bgImg: string;
-}
 export const trendsData = {
   heading: "We set trends.",
   animatedText: "We don't follow.",
   bgImg: "/trendBannerbg.png",
 };
+
+interface TrendsBanner {
+  heading: string;
+  animatedText: string;
+  bgImg: string;
+}

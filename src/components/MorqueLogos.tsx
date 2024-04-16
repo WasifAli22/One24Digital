@@ -11,7 +11,7 @@ const MorqueLogos = ({ morqueData }: { morqueData: Client[] }) => {
       direction="left"
       reverse={false}
       pauseOnHover={true}
-      numberOfCopies={3}
+    //   numberOfCopies={3}
       className="my-custom-marquee space-y-6 px-6 flex items-center"
       innerClassName="my-custom-content" // Add your custom class to change speed
     >

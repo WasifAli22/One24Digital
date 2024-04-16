@@ -60,7 +60,7 @@ export default Banner;
 
 
 
-const AnimatedText = ({ text }: { text: string }) => {
+export const AnimatedText = ({ text }: { text: string }) => {
   const charVariants = {
     hidden: { opacity: 0, x: -20 },
     visible: { opacity: 1, x: 0 },

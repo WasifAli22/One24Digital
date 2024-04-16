@@ -14,7 +14,7 @@ import MorqueLogos from "./MorqueLogos";
 
 const ClientCarousel = () => { 
   return (
-    <div className="swiper-container relative min-h-screen shadow-lg pt-16">
+    <div className="swiper-container relative min-h-screen bg-one-digital-light pt-16">
       <div className="text-center mx-auto w-full flex flex-col justify-between ">
         <div className="flex  flex-col">
           <motion.h1
@@ -55,55 +55,3 @@ const ClientCarousel = () => {
 };
 export default ClientCarousel;
 
-{
-  /* <Marquee
-  fade={true}
-  direction="left"
-  reverse={false}
-  pauseOnHover={true}
-  className="my-custom-marquee" // Add your custom class to change speed
-  innerClassName="my-custom-content" // Add your custom class to change speed
-  numberOfCopies={3}
->
-  {morqueData?.clientsData.map((client, ind) => (
-    <div
-      key={ind}
-      className="max-h-[200px] place-items-center w-[clamp(10rem,1rem+40vmin,30rem)] p-[calc(clamp(10rem,1rem+30vmin,30rem)/10)]"
-    >
-      <Image
-        src={client.url}
-        width={200}
-        height={200}
-        alt="client"
-        className="py-12 px-2 w-full  h-[200px] object-cover  rounded-[0.5rem] aspect-[16/9] "
-      />
-    </div>
-  ))}
-</Marquee> */
-}
-
-{
-  /* <Marquee
-  fade={true}
-  direction="left"
-  reverse={true}
-  pauseOnHover={true}
-  className="my-custom-marquee  "
-  innerClassName="my-custom-content2 "
->
-  {morqueData?.clientsData.map((client, ind) => (
-    <div
-      key={ind}
-      className="max-h-[200px]   w-[clamp(10rem,1rem+40vmin,30rem)] p-[calc(clamp(10rem,1rem+30vmin,30rem)/10)]  items-center justify-center flex"
-    >
-      <Image
-        src={client.url}
-        width={200}
-        height={200}
-        alt="client"
-        className="py-12 px-2 w-full object-cover h-[200px] "
-      />
-    </div>
-  ))}
-</Marquee> */
-}

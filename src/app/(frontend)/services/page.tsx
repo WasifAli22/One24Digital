@@ -8,9 +8,9 @@ const Services = () => {
         <div>
             <ServicesBanner
                 background={{ color: 'red' }}
-                text={<span className=''>Explore Our Services <br /> <span className='mt-5 block'>&</span> <br /> <span className="italic font-bold md:mt-5 block">Transform Your Business.</span></span>}
+                text={"Explore Our Services \n & \n Transform Your Business."}
+                
             />
-
             <OurServicesCard />
         </div>
     )

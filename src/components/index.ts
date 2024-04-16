@@ -166,6 +166,10 @@ export const CompanyData = [
         id: 1,
         title: 'Walter The Cat',
         description: 'Chevrolet Silverado',
+        img : {
+            url : "/company-logos/impression.png",
+            alt : "company impression logo"
+        },
         src: '/work/work1.jpg',
         IcludedAgency: "McCann New York",
         details: "In honor of International Womens Day 2017, we partnered with State Street Global Advisors to introduce the Fearless Girl to the world — a statue of a daring young girl, standing strong on Wall Street. Why? Because companies with women in leadership perform better. The Fearless Girl was dropped on Wall Street in the middle of the night and became a global phenomenon within 24 hours."
@@ -174,6 +178,10 @@ export const CompanyData = [
         id: 2,
         title: 'Changing The Game',
         description: 'Xbox Adaptive Controller',
+        img : {
+            url : "/company-logos/one24 blogs.jpg",
+            alt : "company impression logo"
+        },
         src: '/work/work2.jpg',
         IcludedAgency: "McCann New York",
         details: "In andd of International Womens Day 2017, we partnered with State Street Global Advisors to introduce the Fearless Girl to the world — a statue of a daring young girl, standing strong on Wall Street. Why? Because companies with women in leadership perform better. The Fearless Girl was dropped on Wall Street in the middle of the night and became a global phenomenon within 24 hours."
@@ -184,6 +192,10 @@ export const CompanyData = [
         title: 'ADLaM',
         description: 'Microsoft Office 365',
         src: '/work/work3.jpg',
+        img : {
+            url : "/company-logos/One24 Group company.png",
+            alt : "company impression logo"
+        },
         IcludedAgency: "McCann ",
         details: "In of International Womens Day 2017, we partnered with State Street Global Advisors to introduce the Fearless Girl to the world — a statue of a daring young girl, standing strong on Wall Street. Why? Because companies with women in leadership perform better. The Fearless Girl was dropped on Wall Street in the middle of the night and became a global phenomenon within 24 hours."
 
@@ -193,6 +205,10 @@ export const CompanyData = [
         title: 'Heinzjack',
         description: 'The Kraft Heinz Company',
         src: '/work/work4.jpg',
+        img : {
+            url : "/company-logos/One24OS.png",
+            alt : "company impression logo"
+        },
         IcludedAgency: "McCann london York",
         details: "In sss of International Womens Day 2017, we partnered with State Street Global Advisors to introduce the Fearless Girl to the world — a statue of a daring young girl, standing strong on Wall Street. Why? Because companies with women in leadership perform better. The Fearless Girl was dropped on Wall Street in the middle of the night and became a global phenomenon within 24 hours."
     },
@@ -201,6 +217,10 @@ export const CompanyData = [
         title: 'Walter The Cat',
         description: 'Chevrolet Silverado',
         src: '/work/work1.jpg',
+        img : {
+            url : "/company-logos/One24store.png",
+            alt : "company impression logo"
+        },
         IcludedAgency: "McCann New York",
         details: "In honor of International Womens Day 2017, we partnered with State Street Global Advisors to introduce"
     },
@@ -209,6 +229,10 @@ export const CompanyData = [
         title: 'Changing The Game',
         description: 'Xbox Adaptive Controller',
         src: '/work/work2.jpg',
+        img : {
+            url : "/company-logos/One24trade.png",
+            alt : "company impression logo"
+        },
         IcludedAgency: "McCann New York",
         details: "In andd of International Womens Day 2017, we partnered with State Street Global Advisors to introduce"
     },
@@ -217,6 +241,10 @@ export const CompanyData = [
         title: 'ADLaM',
         description: 'Microsoft Office 365',
         src: '/work/work3.jpg',
+        img : {
+            url : "/company-logos/impression.png",
+            alt : "company impression logo"
+        },
         IcludedAgency: "McCann ",
         details: "In of International Womens Day 2017, we partnered with State Street Global Advisors to introduce"
     },
@@ -225,6 +253,10 @@ export const CompanyData = [
         title: 'Heinzjack',
         description: 'The Kraft Heinz Company',
         src: '/work/work4.jpg',
+        img : {
+            url : "/company-logos/impression.png",
+            alt : "company impression logo"
+        },
         IcludedAgency: "McCann london York",
         details: "In sss of International Womens Day 2017, we partnered with State Street Global Advisors to introduce"
     }   

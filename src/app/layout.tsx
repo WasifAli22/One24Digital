@@ -21,6 +21,12 @@ export const metadata: Metadata = {
       },
     ],
   },
+  appLinks: {
+    web: {
+      url: 'https://one24-digital.vercel.app/',
+      should_fallback: true,
+    },
+  }
 };
 
 export default function RootLayout({

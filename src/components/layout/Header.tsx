@@ -53,7 +53,7 @@ export const Header = (): JSX.Element => {
   };
 
   return (
-    <header className="flex w-[100%] z-50 flex-col justify-center items-center h-[113px] bg-one-digital-dark relative">
+    <header className="flex w-[100%] z-50 flex-col justify-center items-center h-[113px] bg-black relative">
       <div
         className={`flex w-full  justify-around ${
           !isOpen && "md:flex-row flex-row-reverse"

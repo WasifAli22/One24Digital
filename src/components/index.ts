@@ -161,6 +161,74 @@ export const ServicesData = [
     }
 ]
 
+export const CompanyData = [
+    {
+        id: 1,
+        title: 'Walter The Cat',
+        description: 'Chevrolet Silverado',
+        src: '/work/work1.jpg',
+        IcludedAgency: "McCann New York",
+        details: "In honor of International Womens Day 2017, we partnered with State Street Global Advisors to introduce the Fearless Girl to the world — a statue of a daring young girl, standing strong on Wall Street. Why? Because companies with women in leadership perform better. The Fearless Girl was dropped on Wall Street in the middle of the night and became a global phenomenon within 24 hours."
+    },
+    {
+        id: 2,
+        title: 'Changing The Game',
+        description: 'Xbox Adaptive Controller',
+        src: '/work/work2.jpg',
+        IcludedAgency: "McCann New York",
+        details: "In andd of International Womens Day 2017, we partnered with State Street Global Advisors to introduce the Fearless Girl to the world — a statue of a daring young girl, standing strong on Wall Street. Why? Because companies with women in leadership perform better. The Fearless Girl was dropped on Wall Street in the middle of the night and became a global phenomenon within 24 hours."
+
+    },
+    {
+        id: 3,
+        title: 'ADLaM',
+        description: 'Microsoft Office 365',
+        src: '/work/work3.jpg',
+        IcludedAgency: "McCann ",
+        details: "In of International Womens Day 2017, we partnered with State Street Global Advisors to introduce the Fearless Girl to the world — a statue of a daring young girl, standing strong on Wall Street. Why? Because companies with women in leadership perform better. The Fearless Girl was dropped on Wall Street in the middle of the night and became a global phenomenon within 24 hours."
+
+    },
+    {
+        id: 4,
+        title: 'Heinzjack',
+        description: 'The Kraft Heinz Company',
+        src: '/work/work4.jpg',
+        IcludedAgency: "McCann london York",
+        details: "In sss of International Womens Day 2017, we partnered with State Street Global Advisors to introduce the Fearless Girl to the world — a statue of a daring young girl, standing strong on Wall Street. Why? Because companies with women in leadership perform better. The Fearless Girl was dropped on Wall Street in the middle of the night and became a global phenomenon within 24 hours."
+    },
+    {
+        id: 5,
+        title: 'Walter The Cat',
+        description: 'Chevrolet Silverado',
+        src: '/work/work1.jpg',
+        IcludedAgency: "McCann New York",
+        details: "In honor of International Womens Day 2017, we partnered with State Street Global Advisors to introduce"
+    },
+    {
+        id: 6,
+        title: 'Changing The Game',
+        description: 'Xbox Adaptive Controller',
+        src: '/work/work2.jpg',
+        IcludedAgency: "McCann New York",
+        details: "In andd of International Womens Day 2017, we partnered with State Street Global Advisors to introduce"
+    },
+    {
+        id: 7,
+        title: 'ADLaM',
+        description: 'Microsoft Office 365',
+        src: '/work/work3.jpg',
+        IcludedAgency: "McCann ",
+        details: "In of International Womens Day 2017, we partnered with State Street Global Advisors to introduce"
+    },
+    {
+        id: 8,
+        title: 'Heinzjack',
+        description: 'The Kraft Heinz Company',
+        src: '/work/work4.jpg',
+        IcludedAgency: "McCann london York",
+        details: "In sss of International Womens Day 2017, we partnered with State Street Global Advisors to introduce"
+    }   
+]
 export const PortfolioData = [
     {
         id: 1,

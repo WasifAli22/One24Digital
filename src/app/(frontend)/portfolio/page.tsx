@@ -8,7 +8,7 @@ const Portfolio = () => {
     <div>
       <PortfolioBanner
         background={{ color: 'red' }}
-        text={"Explore Our Services \n & \n Transform Your Business."}
+        text={"See Our Portfolio \n OR \n Efficient Recent Work."}
       />
       <PortfolioCard />
     </div>

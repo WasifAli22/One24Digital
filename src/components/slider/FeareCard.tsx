@@ -47,10 +47,10 @@ const FeareCard: React.FC<Props> = ({ images, reverse, banner }) => {
                 <motion.div
                   key={index}
                   className="w-[100%] "
-                  variants={slideIn("up", "tween", 0.2, 1)}
-                  initial="hidden"
-                  whileInView="show"
-                  viewport={{ once: true, amount: 0.25 }}
+                  // variants={slideIn("up", "tween", 0.2, 1)}
+                  // initial="hidden"
+                  // whileInView="show"
+                  // viewport={{ once: true, amount: 0.25 }}
                 >
                   <Image
                     src={imageData.src}
@@ -64,10 +64,10 @@ const FeareCard: React.FC<Props> = ({ images, reverse, banner }) => {
               <div className="grid grid-cols-1  md:grid-cols-12">
                 {images.slice(1, 2).map((imageData, index) => (
                   <motion.div
-                    variants={slideIn("right", "tween", 0.2, 1)}
-                    initial="hidden"
-                    whileInView="show"
-                    viewport={{ once: true, amount: 0.25 }}
+                    // variants={slideIn("right", "tween", 0.2, 1)}
+                    // initial="hidden"
+                    // whileInView="show"
+                    // viewport={{ once: true, amount: 0.25 }}
                     key={index}
                     className="first:border-r-4 border-white  col-span-8"
                   >
@@ -82,10 +82,10 @@ const FeareCard: React.FC<Props> = ({ images, reverse, banner }) => {
                 ))}
                 {images.slice(2, 3).map((imageData, index) => (
                   <motion.div
-                    variants={slideIn("left", "tween", 0.2, 1)}
-                    initial="hidden"
-                    whileInView="show"
-                    viewport={{ once: true, amount: 0.25 }}
+                    // variants={slideIn("left", "tween", 0.2, 1)}
+                    // initial="hidden"
+                    // whileInView="show"
+                    // viewport={{ once: true, amount: 0.25 }}
                     key={index}
                     className="col-span-4"
                   >

@@ -48,10 +48,10 @@ const ThreeCard: React.FC<Props> = ({ images, reverse, banner }) => {
             <>
               {/* Displaying third image */}
               <motion.div
-                variants={slideIn("right", "tween", 0.2, 1)}
-                initial="hidden"
-                whileInView="show"
-                viewport={{ once: true, amount: 0.25 }}
+                // variants={slideIn("right", "tween", 0.2, 1)}
+                // initial="hidden"
+                // whileInView="show"
+                // viewport={{ once: true, amount: 0.25 }}
                 className="col-span-5 border-r-4 border-white overflow-hidden"
               >
                 <Image
@@ -64,10 +64,10 @@ const ThreeCard: React.FC<Props> = ({ images, reverse, banner }) => {
               </motion.div>
               {/* Displaying first two images */}
               <motion.div
-                variants={slideIn("left", "tween", 0.2, 1)}
-                initial="hidden"
-                whileInView="show"
-                viewport={{ once: true, amount: 0.25 }}
+                // variants={slideIn("left", "tween", 0.2, 1)}
+                // initial="hidden"
+                // whileInView="show"
+                // viewport={{ once: true, amount: 0.25 }}
                 className="col-span-7  overflow-hidden"
               >
                 {images.slice(0, 2).map((imageData, index) => (
@@ -87,10 +87,10 @@ const ThreeCard: React.FC<Props> = ({ images, reverse, banner }) => {
             <>
               {/* Displaying first two images */}
               <motion.div
-                variants={slideIn("right", "tween", 0.2, 1)}
-                initial="hidden"
-                whileInView="show"
-                viewport={{ once: true, amount: 0.25 }}
+                // variants={slideIn("right", "tween", 0.2, 1)}
+                // initial="hidden"
+                // whileInView="show"
+                // viewport={{ once: true, amount: 0.25 }}
                 className="bg-black col-span-7"
               >
                 {images.slice(0, 2).map((imageData, index) => (
@@ -107,10 +107,10 @@ const ThreeCard: React.FC<Props> = ({ images, reverse, banner }) => {
               </motion.div>
               {/* Displaying third image */}
               <motion.div
-                variants={slideIn("right", "tween", 0.2, 1)}
-                initial="hidden"
-                whileInView="show"
-                viewport={{ once: true, amount: 0.25 }}
+                // variants={slideIn("right", "tween", 0.2, 1)}
+                // initial="hidden"
+                // whileInView="show"
+                // viewport={{ once: true, amount: 0.25 }}
                 className="col-span-5 overflow-hidden"
               >
                 <Image

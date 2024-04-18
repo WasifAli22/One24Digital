@@ -45,10 +45,10 @@ const FourCard: React.FC<Props> = ({ images, reverse, banner }) => {
           {!reverse ? (
             <>
               <motion.div
-                variants={slideIn("right", "tween", 0.2, 1)}
-                initial="hidden"
-                whileInView="show"
-                viewport={{ once: true, amount: 0.25 }}
+                // variants={slideIn("right", "tween", 0.2, 1)}
+                // initial="hidden"
+                // whileInView="show"
+                // viewport={{ once: true, amount: 0.25 }}
                 className="col-span-7  overflow-hidden bg-red-200"
               >
                 {images.slice(0, 2).map((imageData, index) => (
@@ -65,10 +65,10 @@ const FourCard: React.FC<Props> = ({ images, reverse, banner }) => {
                 ))}
               </motion.div>
               <motion.div
-                variants={slideIn("left", "tween", 0.2, 1)}
-                initial="hidden"
-                whileInView="show"
-                viewport={{ once: true, amount: 0.25 }}
+                // variants={slideIn("left", "tween", 0.2, 1)}
+                // initial="hidden"
+                // whileInView="show"
+                // viewport={{ once: true, amount: 0.25 }}
                 className="col-span-5 overflow-hidden"
               >
                 {images.slice(2).map((imageData, index) => (
@@ -88,10 +88,10 @@ const FourCard: React.FC<Props> = ({ images, reverse, banner }) => {
           ) : (
             <>
               <motion.div
-                variants={slideIn("right", "tween", 0.2, 1)}
-                initial="hidden"
-                whileInView="show"
-                viewport={{ once: true, amount: 0.25 }}
+                // variants={slideIn("right", "tween", 0.2, 1)}
+                // initial="hidden"
+                // whileInView="show"
+                // viewport={{ once: true, amount: 0.25 }}
                 className="col-span-5 border-r-4 overflow-hidden"
               >
                 <Image
@@ -103,10 +103,10 @@ const FourCard: React.FC<Props> = ({ images, reverse, banner }) => {
                 />
               </motion.div>
               <motion.div
-                variants={slideIn("right", "tween", 0.2, 1)}
-                initial="hidden"
-                whileInView="show"
-                viewport={{ once: true, amount: 0.25 }}
+                // variants={slideIn("right", "tween", 0.2, 1)}
+                // initial="hidden"
+                // whileInView="show"
+                // viewport={{ once: true, amount: 0.25 }}
                 className="col-span-7  overflow-hidden bg-red-200"
               >
                 <Image
@@ -118,10 +118,10 @@ const FourCard: React.FC<Props> = ({ images, reverse, banner }) => {
                 />
 
                 <motion.div
-                  variants={slideIn("right", "tween", 0.2, 1)}
-                  initial="hidden"
-                  whileInView="show"
-                  viewport={{ once: true, amount: 0.25 }}
+                  // variants={slideIn("right", "tween", 0.2, 1)}
+                  // initial="hidden"
+                  // whileInView="show"
+                  // viewport={{ once: true, amount: 0.25 }}
                   className="flex  overflow-hidden bg-red-200"
                 >
                   {images.slice(2,4).map((imageData, index) => (

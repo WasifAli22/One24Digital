@@ -8,6 +8,7 @@ const config: Config = {
   ],
   theme: {
     extend: {
+      
       backgroundImage: {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
         "gradient-conic":
@@ -35,10 +36,15 @@ const config: Config = {
             transform: "translateY(0)",
           },
         },
+        marquee: {
+          to: { transform: "translateX(-50%)" },
+        },
       },
       animation: {
         "slide-in-top": "slide-in-top 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both",
+        marquee: "marquee var(--duration, 30s) linear infinite",
       },
+    
     },
   },
   plugins: [],

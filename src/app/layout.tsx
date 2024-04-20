@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
 import { Header, Footer } from "@/components";
+import { ApolloWrapper } from "./lib/apollo-provider";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -23,10 +24,10 @@ export const metadata: Metadata = {
   },
   appLinks: {
     web: {
-      url: 'https://one24-digital.vercel.app/',
+      url: "https://one24-digital.vercel.app/",
       should_fallback: true,
     },
-  }
+  },
 };
 
 export default function RootLayout({
@@ -37,9 +38,11 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={inter.className}>
-        <Header />
-        {children}
-        <Footer />
+        <ApolloWrapper>
+          <Header />
+          {children}
+          <Footer />
+        </ApolloWrapper>
       </body>
     </html>
   );

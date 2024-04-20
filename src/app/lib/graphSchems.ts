@@ -4,6 +4,13 @@ export const typeDefs = gql`
   # official website query string
   type Query {
     getWebsiteData: Website
+    getHeader: Header
+    getFooter: Footer
+    getHome: Home
+    getPortfolio: Portfolio
+    getServices: Services
+    getCompany: Company
+    getContact: Contact
   }
   type Website {
     header: Header
@@ -170,6 +177,8 @@ export const typeDefs = gql`
   type FooterItem {
     title: String
     links: [FooterLink]
+    locationTitle : String
+    addressLi : [FooterAddress]
   }
   type FooterLink {
     name: String
@@ -177,5 +186,8 @@ export const typeDefs = gql`
   }
   type FooterInstruction {
     text: String
+  }
+  type FooterAddress {
+    name: String
   }
 `;

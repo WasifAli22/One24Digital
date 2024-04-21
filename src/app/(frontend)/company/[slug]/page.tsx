@@ -5,7 +5,7 @@ import { BASE_URL } from "@/app/lib/constant";
 import SkeletonService from "../../test/page";
 import type { CompanyItems } from "@/app/lib/types";
 
-export const getCompanyData = async () => {
+const getCompanyData = async () => {
   try {
     const res = await fetch(`${BASE_URL}/api/graphql`, {
       method: "POST",
@@ -46,7 +46,7 @@ const CompanyDetail = async ({ params }: { params: { slug: string } }) => {
   const formattedSlug = decodedSlug.replace(/-/g, " ");
 
   const data = await getCompanyData();
-  console.log("🚀 ~ CompanyDetail ~ data:", data?.getCompany?.CompanyData)
+  // console.log("🚀 ~ CompanyDetail ~ data:", data?.getCompany?.CompanyData)
 
   const service = data?.getCompany?.CompanyData.find(
     (product : CompanyItems) => product.title.toLowerCase() === formattedSlug.toLowerCase()

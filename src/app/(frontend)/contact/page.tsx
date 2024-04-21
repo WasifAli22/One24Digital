@@ -58,7 +58,7 @@ const getContactData = async () => {
 
 const page = async () => {
     const data = await getContactData();
-    console.log("🚀 ContactSliderData -> ~ page ~ data:", data && data?.cities)
+    // console.log("🚀 ContactSliderData -> ~ page ~ data:", data && data?.cities)
   return (
     <div>
       <GotQuestion gotQuestionData={data?.GotQuestionData} />

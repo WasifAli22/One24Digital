@@ -13,7 +13,8 @@ const AsyncOurServices = React.lazy(() => import('./services/OurServices'));
 const OurServicesWithSkeleton = () => {
   return (
     <Suspense fallback={<Skeleton />}>
-      <AsyncOurServices />
+      {/* <AsyncOurServices /> */}
+      <p>Loading</p>
     </Suspense>
   );
 };

@@ -1,7 +1,8 @@
 "use client";
+import { BASE_URL } from "./constant";
 import { ApolloClient, ApolloProvider, InMemoryCache } from "@apollo/client";
 const client = new ApolloClient({
-  uri: "http://localhost:3000/api/graphql",
+  uri: `${BASE_URL}/api/graphql`,
   cache: new InMemoryCache(),
 });
 interface IGraphQlProviderProps {

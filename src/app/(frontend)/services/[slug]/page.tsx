@@ -1,9 +1,42 @@
 import React from 'react';
 // import { ServicesData } from '@/components';
 import Image from 'next/image';
-import { getServiceData } from '../page';
+// import { getServiceData } from '../page';
 import { ServiceItem } from '@/app/lib/types';
 import SkeletonService from '../../test/page';
+import { BASE_URL } from '@/app/lib/constant';
+
+const getServiceData = async () => {
+    try {
+      const res = await fetch(`${BASE_URL}/api/graphql`, {
+        method: "POST",
+        body: JSON.stringify({
+          query: `
+                query GetServices {
+                  getServices {
+                    ServicesData {
+                      description
+                      details
+                      id
+                      includedAgency
+                      src
+                      title
+                    }
+                  }
+                }
+                    `,
+        }),
+        headers: {
+          "Content-Type": "application/json",
+        },
+        next: { revalidate: 10 },
+      });
+      const data = await res.json();
+      return data?.data;
+    } catch (error: any) {
+      console.error("Error fetching website data:", error.message);
+    }
+  };
 
 const ServiceDetail = async ({ params }: { params: { slug: string } }) => {
     const decodedSlug = decodeURIComponent(params.slug);

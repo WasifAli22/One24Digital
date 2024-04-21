@@ -3,7 +3,7 @@ import Image from "next/image";
 import { BASE_URL } from "@/app/lib/constant";
 import { ServiceItem } from "@/app/lib/types";
 import SkeletonService from "../../test/page";
-export const getPortfolioData = async () => {
+const getPortfolioData = async () => {
   try {
     const res = await fetch(`${BASE_URL}/api/graphql`, {
       method: "POST",

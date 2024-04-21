@@ -3,7 +3,7 @@ import ServicesBanner from "@/components/services/ServicesBanner";
 import OurServicesCard from "@/components/services/OurServices";
 import { BASE_URL } from "@/app/lib/constant";
 
-export const getServiceData = async () => {
+const getServiceData = async () => {
   try {
     const res = await fetch(`${BASE_URL}/api/graphql`, {
       method: "POST",

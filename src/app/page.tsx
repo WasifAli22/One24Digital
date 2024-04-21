@@ -1,20 +1,102 @@
-
-import Image from "next/image";
-import Footer from "@/components/layout/Footer";
-import { Header , Banner, Compaign, TrendBanner } from "@/components";
+import { Banner, Compaign, TrendBanner } from "@/components";
 import LogoCarousel from "@/components/LogosCarasuel";
+import { BASE_URL } from "./lib/constant";
+// import { getHome as query } from "./lib/queries";
+// import { getClient } from "./lib/client";
 
 // export const dynamic = "force-dynamic";
-async function Home() {
-  
+
+const getHomeData = async () => {
+  try {
+    const res = await fetch(`${BASE_URL}/api/graphql`, {
+      method: "POST",
+      body: JSON.stringify({
+        query: `
+          query GetHome {
+            getHome {
+              bannerData {
+                animeText
+                arrowImg {
+                  alt
+                  link
+                  size {
+                    h
+                    w
+                  }
+                  url
+                }
+                background {
+                  bgColor {
+                    dark
+                  }
+                  bgImg
+                }
+                curveArrow {
+                  alt
+                  h
+                  url
+                  w
+                }
+              }
+              compaignSlider {
+                images {
+                  alt
+                  src
+                }
+                title
+              }
+              morqueData {
+                clientsData {
+                  alt
+                  url
+                }
+                description
+                title
+              }
+              trendsData {
+                animatedText
+                bgImg
+                heading
+              }
+            }
+          }
+            `,
+      }),
+      headers: {
+        "Content-Type": "application/json",
+      },
+      next: { revalidate: 10 },
+    });
+    const data = await res.json();
+
+    // console.log("data of home", data?.data?.getHome?.morqueData);
+    return data
+  } catch (error: any) {
+    console.error("Error fetching website data:", error.message);
+  }
+};
+
+export default async function Home() {
+  const data = await getHomeData();
+  // console.log("🚀 ~ Home ~ data:", data && data)
+
   return (
     <div className="relative ">
-      <Banner />
-      <Compaign />
-      <TrendBanner />
-      <LogoCarousel />
+      <Banner bannerData={data?.data?.getHome?.bannerData} />
+      <Compaign testImages={data?.data?.getHome?.compaignSlider} />
+      <TrendBanner trendsData={data?.data?.getHome?.trendsData} />
+      <LogoCarousel morqueData={data?.data?.getHome?.morqueData} />
     </div>
   );
 }
 
-export default Home;
+// export async function getStaticProps() {
+//   const data = await getClient(query);
+//   console.log("data of home", data.getHome.morqueData);
+//   return {
+//     props: {
+//       data,
+//     },
+//     revalidate: 10,
+//   };
+// }

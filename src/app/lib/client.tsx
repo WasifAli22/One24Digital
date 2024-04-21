@@ -1,13 +1,18 @@
-// // lib/client.js
-// import { HttpLink, InMemoryCache, ApolloClient } from "@apollo/client";
+// import { HttpLink } from "@apollo/client";
+// import {
+//   NextSSRInMemoryCache,
+//   NextSSRApolloClient,
+// } from "@apollo/experimental-nextjs-app-support/ssr";
 // import { registerApolloClient } from "@apollo/experimental-nextjs-app-support/rsc";
+// import { BASE_URL } from "./constant";
 
 // export const { getClient } = registerApolloClient(() => {
-//   return new ApolloClient({
-//     cache: new InMemoryCache(),
+//   return new NextSSRApolloClient({
+//     cache: new NextSSRInMemoryCache(),
 //     link: new HttpLink({
-//       uri: "https://main--time-pav6zq.apollographos.net/graphql",
-//     }),
+//       uri: `${BASE_URL}/api/graphql`,
+//     }) as any,
 //   });
 // });
+
 export {}

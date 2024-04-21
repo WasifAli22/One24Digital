@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import React from 'react';
 
 
@@ -32,13 +33,13 @@ const ContactUs = () => {
                 <div className="form-group checkboxs-btns">
                   <label htmlFor="manufacture" className="">
                     <input id="manufacture" type="radio" name="checktype" />
-                    <img className="building" src="images/building.png" /> Manufacture, Wholesaler, Distributor
-                    <img className="check_img" src="images/check.png" />
+                    <Image width={16} height={16}  alt={"#"} className="building" src="images/building.png" /> Manufacture, Wholesaler, Distributor
+                    <Image width={16} height={16}  alt={"#"} className="check_img" src="images/check.png" />
                   </label>
                   <label htmlFor="individual" className="active">
-                    <img className="building" src="images/home.png" />
+                    <Image width={16} height={16} alt={"#"} className="building" src="images/home.png" />
                     <input id="individual" type="radio" name="checktype" /> Retailer, Reseller, <br /> An individual
-                    <img className="check_img" src="images/check.png" />
+                    <Image width={16} height={16} alt={"#"}className="check_img" src="images/check.png" />
                   </label>
                 </div>
                 <div className="form-group row">
@@ -101,7 +102,7 @@ const ContactUs = () => {
       </main>
 
       <div className="container">
-        <img src="images/reach.png" className="img-fluid" alt="One24 Partner Stores" />
+        <Image width={16} height={16}   src="images/reach.png" className="img-fluid" alt="One24 Partner Stores" />
       </div>
 
 

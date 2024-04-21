@@ -1,11 +1,11 @@
-import { Header } from "./layout/Header";
+// import { Header } from "./layout/Header";
 import Banner from "./Banner";
 import Compaign from "./Compaign";
 import TrendBanner from "./TrendBanner";
 
 import { RotatingBlinker } from "./layout/CursorBlinker";
 
-import Footer from "./layout/Footer";
+// import Footer from "./layout/Footer";
 
 
 
@@ -89,7 +89,7 @@ export const footerInstructions = [
     }
 ]
 
-export { Header, Banner, Compaign, TrendBanner, Footer, RotatingBlinker }
+export { Banner, Compaign, TrendBanner, RotatingBlinker }
 
 
 export const ServicesData = [

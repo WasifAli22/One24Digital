@@ -2,12 +2,16 @@
 import React, { ReactNode, useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import { textVariant } from "@/app/utils/motion";
-import { trendsData } from "./dummydata";
+// import { trendsData } from "./dummydata";
+import { TrendsBanner } from "@/app/lib/types";
 
 interface AnimatedTextProps {
   text: string;
 }
 
+interface Props {
+  trendsData: TrendsBanner;
+}
 
 
 const AnimatedText: React.FC<AnimatedTextProps> = ({ text }) => {
@@ -41,7 +45,8 @@ const AnimatedText: React.FC<AnimatedTextProps> = ({ text }) => {
   );
 };
 
-const TrendBanner: React.FC = () => {
+const TrendBanner: React.FC<Props> = ({ trendsData }) => {
+  // console.log("🚀 ~ trendsData:", trendsData)
   return (
     <motion.div
       variants={textVariant(0.5)}

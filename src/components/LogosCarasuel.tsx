@@ -5,14 +5,27 @@ import React from "react";
 import { morqueData } from "./mockApi";
 import Image from "next/image";
 // import { Marquee } from './layout/Morque';
-import { Marquee } from "@devnomic/marquee";
 import "@devnomic/marquee/dist/index.css";
 import { motion } from "framer-motion";
 import { textVariant } from "@/app/utils/motion";
-import Marquee2 from "./layout/Morque";
 import MorqueLogos from "./MorqueLogos";
+import { Fragment } from "react";
+export interface Client {
+  url: string;
+  alt: string;
+}
+export interface MorqueData {
+  title: string;
+  description: string;
+  clientsData: Client[];
+}
 
-const ClientCarousel = () => { 
+interface Props {
+  morqueData: MorqueData;
+}
+
+const ClientCarousel : React.FC<Props> = ({ morqueData }) => { 
+  console.log("🚀 ~ morqueData:", morqueData)
   return (
     <div className="swiper-container relative min-h-screen bg-one-digital-light pt-16">
       <div className="text-center mx-auto w-full flex flex-col justify-between ">
@@ -24,10 +37,10 @@ const ClientCarousel = () => {
             className=" md:text-6xl sm:text-5xl text-4xl font-semibold leading-[80px] lg:text-7xl font-mediu md:pb-3 sm:pb-2 pb-1 lg:pb-4"
           >
             {morqueData?.title.split("\n").map((line, index) => (
-              <React.Fragment key={index}>
+              <Fragment key={index}>
                 {line}
                 {index !== morqueData?.title.split("\n").length - 1 && <br />}
-              </React.Fragment>
+              </Fragment>
             ))}
           </motion.h1>
           <motion.p
@@ -36,12 +49,12 @@ const ClientCarousel = () => {
             whileInView={"show"}
           >
             {morqueData?.description.split("\n").map((line, index) => (
-              <React.Fragment key={index}>
+              <Fragment key={index}>
                 {line}
                 {index !== morqueData?.description.split("\n").length - 1 && (
                   <br />
                 )}
-              </React.Fragment>
+              </Fragment>
             ))}
           </motion.p>
         </div>

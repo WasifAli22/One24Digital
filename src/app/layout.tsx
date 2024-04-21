@@ -1,8 +1,9 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
-import { Header, Footer } from "@/components";
-import { ApolloWrapper } from "./lib/apollo-provider";
+// import { Header } from "@/components";
+// import { ApolloWrapper } from "./lib/apollo-provider";
+// import Footer from "@/components/layout/Footer";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -32,17 +33,15 @@ export const metadata: Metadata = {
 
 export default function RootLayout({
   children,
-}: Readonly<{
-  children: React.ReactNode;
-}>) {
+}: Readonly<{ children: React.ReactNode }>) {
   return (
     <html lang="en">
       <body className={inter.className}>
-        <ApolloWrapper>
-          <Header />
+        {/* <ApolloWrapper> */}
+          {/* <Header /> */}
           {children}
-          <Footer />
-        </ApolloWrapper>
+          {/* <Footer /> */}
+        {/* </ApolloWrapper> */}
       </body>
     </html>
   );

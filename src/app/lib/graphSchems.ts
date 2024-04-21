@@ -73,7 +73,7 @@ export const typeDefs = gql`
     images: [Image]
   }
   type Image {
-    url: String
+    src: String
     alt: String
   }
   type TrendsData {

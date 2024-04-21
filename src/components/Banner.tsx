@@ -3,10 +3,17 @@ import Image from "next/image";
 import React from "react";
 import { motion } from "framer-motion";
 import Link from "next/link";
-import { bannerData } from "./dummydata";
+import { BannerData } from "@/app/lib/types";
+// import { bannerData } from "./dummydata";
 
-const Banner = () => {
-  const hasImage = bannerData?.background?.bgImg && bannerData.background.bgImg !== "";
+
+interface Props {
+  bannerData : BannerData
+}
+
+const Banner : React.FC<Props> = ({ bannerData }) => {
+  // console.log("🚀 ~ bannerData2:", bannerData)
+  const hasImage = bannerData?.background?.bgImg && bannerData?.background?.bgImg !== "";
 
   return (
     <div

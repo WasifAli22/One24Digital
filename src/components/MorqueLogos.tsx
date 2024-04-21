@@ -3,6 +3,16 @@ import { Marquee } from "@devnomic/marquee";
 import "@devnomic/marquee/dist/index.css";
 import { Client } from "@/app/lib/types";
 import Image from "next/image";
+// import customLoader from "@/app/lib/customLoader";
+
+// Docs: https://aws.amazon.com/developer/application-security-performance/articles/image-optimization
+export  function cloudfrontLoader({ src, width, quality } : { src: any, width: number, quality?: number }) {
+  const url = new URL(`${src}`)
+  url.searchParams.set('format', 'auto')
+  url.searchParams.set('width', width.toString())
+  url.searchParams.set('quality', (quality || 75).toString())
+  return url.href
+}
 
 const MorqueLogos = ({ morqueData }: { morqueData: Client[] }) => {
   return (
@@ -29,10 +39,11 @@ const MorqueLogos = ({ morqueData }: { morqueData: Client[] }) => {
               return (
                 <Image
                   key={`${groupIndex}-${boxIndex}`}
-                  src={currentClient.url}
-                  alt={currentClient.alt}
+                  src={currentClient?.url}
+                  alt={currentClient?.alt}
                   width={200}
                   height={200}
+                  loader={cloudfrontLoader}
                   className="h-[60px] w-[60px] object-contain object-center translate-y-4 rounded-[8px] bg-white drop-shadow-lg transform "
                 />
               );

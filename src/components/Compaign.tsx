@@ -1,7 +1,13 @@
 "use client";
+import { TestImages } from "@/app/lib/types";
 import Slide from "./slider/Slide";
-import { testImages } from "./dummydata";
+// import { testImages } from "./dummydata";
 // Import Swiper React components
+
+
+interface Props {
+  testImages : TestImages
+}
 
 
 
@@ -26,9 +32,9 @@ const arrangeImages = (images: any[]) => {
   return gridPattern;
 };
 
-const Compaign = () => {
+const Compaign : React.FC<Props> = ({testImages}) => {
   const imageGrid = testImages && arrangeImages(testImages?.images);
-  //   console.log(imageGrid);
+  // console.log(imageGrid);
   return (
     <div
       id="compaign"

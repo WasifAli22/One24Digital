@@ -19,21 +19,21 @@ const Banner : React.FC<Props> = ({ bannerData }) => {
     <div
       className={`flex-col inset-0 items-center object-cover mx-auto min-h-[600px] lg:min-h-[800px] w-full`}
       style={{
-        backgroundImage: hasImage ? `url(${bannerData.background.bgImg})` : "none",
-        backgroundColor: hasImage ? "transparent" : bannerData.background.bgColor.dark,
-        backgroundSize: hasImage ? "cover" : "auto",
-        backgroundPosition: hasImage ? "center" : "auto",
+        backgroundImage:hasImage &&  hasImage ? `url(${bannerData?.background?.bgImg})` : "none",
+        backgroundColor:hasImage &&  hasImage ? "transparent" : bannerData?.background?.bgColor?.dark,
+        backgroundSize: hasImage && hasImage ? "cover" : "auto",
+        backgroundPosition: hasImage && hasImage ? "center" : "auto",
       }}
     >
-      <AnimatedText text={bannerData.animeText} />
+      <AnimatedText text={bannerData?.animeText} />
       <div className="grid mt-8 grid-cols-12 mx-28">
         <div className="lg:col-span-6 mt-[-30px] hidden md:block z-10 col-span-4 text-left">
           {/* {hasImage ||  ( */}
             <Image
-              src={bannerData.curveArrow.url}
-              alt={bannerData.curveArrow.alt}
-              height={bannerData.curveArrow.h}
-              width={bannerData.curveArrow.w}
+              src={bannerData?.curveArrow.url}
+              alt={bannerData?.curveArrow.alt}
+              height={bannerData?.curveArrow.h}
+              width={bannerData?.curveArrow.w}
             />
           {/* )} */}
         </div>
@@ -48,12 +48,12 @@ const Banner : React.FC<Props> = ({ bannerData }) => {
           }}
           className="lg:col-span-6 col-span-12 lg:pt-0 pt-12 text-center"
         >
-          <Link href={bannerData.arrowImg.link} className="flex lg:block">
+          <Link href={bannerData?.arrowImg?.link} className="flex lg:block">
             <Image
-              src={bannerData.arrowImg.url}
-              alt={bannerData.arrowImg.alt}
-              height={bannerData.arrowImg.size.h}
-              width={bannerData.arrowImg.size.w}
+              src={bannerData?.arrowImg.url}
+              alt={bannerData?.arrowImg.alt}
+              height={bannerData?.arrowImg.size.h}
+              width={bannerData?.arrowImg.size.w}
               className="cursor-pointer"
             />
           </Link>
@@ -77,7 +77,7 @@ export const AnimatedText = ({ text }: { text: string }) => {
     <motion.div
       className={` md:px-0 sm:px-3 px-1 sm:text-[70px] text-[50px] md:text-[145px] text-center top-0 pt-10 font-extrabold text-white`}
     >
-      {text.split("").map((char, index) => (
+      {text?.split("").map((char, index) => (
         <motion.span
           key={index}
           variants={charVariants}

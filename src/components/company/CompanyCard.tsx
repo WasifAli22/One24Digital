@@ -1,11 +1,16 @@
 "use client";
 import Link from "next/link";
 import React from "react";
-import { CompanyData } from "..";
 import { motion } from "framer-motion";
 import { fadeIn, textVariant } from "@/app/utils/motion";
 import Image from "next/image";
-const CompanyCard = () => {
+import type { CompanyItems } from "@/app/lib/types";
+
+interface Props {
+  companyData: CompanyItems[];
+}
+const CompanyCard : React.FC<Props> = ({companyData}) => {
+  console.log("🚀 ~ companyData:", companyData)
   return (
     <motion.div
       initial="hidden"
@@ -14,7 +19,7 @@ const CompanyCard = () => {
       transition={{ duration: 0.5 }}
       className="grid grid-cols-12"
     >
-      {CompanyData.map((project, index) => (
+      {companyData?.map((project, index) => (
         <motion.div
           key={project.id}
           variants={fadeIn("up", "spring", 0.07 * index, 0.75)}

@@ -1,15 +1,25 @@
 import React from 'react';
-import { ServicesData } from '@/components';
+// import { ServicesData } from '@/components';
 import Image from 'next/image';
+import { getServiceData } from '../page';
+import { ServiceItem } from '@/app/lib/types';
+import SkeletonService from '../../test/page';
 
-const ServiceDetail = ({ params }: { params: { slug: string } }) => {
+const ServiceDetail = async ({ params }: { params: { slug: string } }) => {
     const decodedSlug = decodeURIComponent(params.slug);
     const formattedSlug = decodedSlug.replace(/-/g, ' ');
+    const data = await getServiceData();
 
-    const service = ServicesData.find(product => product.title.toLowerCase() === formattedSlug.toLowerCase());
+
+    const service = data?.getServices?.ServicesData?.find((product : ServiceItem) => product.title.toLowerCase() === formattedSlug.toLowerCase());
 
     if (!service) {
-        return <div>Service not found</div>;
+        return (
+            <div>
+                Service not found
+                <SkeletonService />
+            </div>
+        );
     }
 
     return (

@@ -1,10 +1,18 @@
 "use client";
 import Link from "next/link";
 import React from "react";
-import { ServicesData } from "..";
+// import { ServicesData } from "..";
 import { motion } from "framer-motion";
-import { fadeIn, staggerContainer, textVariant } from "@/app/utils/motion";
-const OurServicesCard = () => {
+import { fadeIn, textVariant } from "@/app/utils/motion";
+import type { ServiceItem } from "@/app/lib/types";
+
+
+interface Props {
+  servicesData: ServiceItem[];
+}
+
+const OurServicesCard : React.FC<Props>= ({ servicesData }) => {
+  // console.log("🚀 ~ servicesData:", servicesData)
   return (
     <motion.div
       initial="hidden"
@@ -13,7 +21,7 @@ const OurServicesCard = () => {
       transition={{ duration: 0.5 }}
       className="grid grid-cols-12"
     >
-      {ServicesData.map((project, index) => (
+      {servicesData?.map((project, index) => (
         <motion.div
           key={project.id}
           variants={fadeIn("up", "spring", 0.07 * index, 0.75)}

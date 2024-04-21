@@ -1,10 +1,15 @@
 "use client";
 import Link from "next/link";
 import React from "react";
-import { PortfolioData } from "..";
 import { motion } from "framer-motion";
 import { fadeIn, textVariant } from "@/app/utils/motion";
-const PortfolioCard = () => {
+import { ServiceItem } from "@/app/lib/types";
+
+interface Props {
+  portfolioData: ServiceItem[];
+}
+
+const PortfolioCard: React.FC<Props> = ({portfolioData}) => {
   return (
     <motion.div
       initial="hidden"
@@ -13,7 +18,7 @@ const PortfolioCard = () => {
       transition={{ duration: 0.5 }}
       className="grid grid-cols-12"
     >
-      {PortfolioData.map((project, index) => (
+      {portfolioData.map((project, index) => (
         <motion.div
           key={project.id}
           variants={fadeIn("up", "spring", 0.07 * index, 0.75)}

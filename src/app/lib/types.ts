@@ -86,3 +86,20 @@ export interface TrendsBanner {
   animatedText: string;
   bgImg: string;
 }
+
+// service page cards sections, and portsolio
+export type ServiceItem = {
+  id: number;
+  title: string;
+  description: string;
+  src: string;
+  includedAgency: string;
+  details: string;
+};
+
+export interface CompanyItems extends ServiceItem {
+  img : {
+    url: string;
+    alt: string;
+  }
+}

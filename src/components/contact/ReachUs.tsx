@@ -1,13 +1,16 @@
 "use client";
 import React from "react";
-import { ReachUsData } from "./contactData";
 import { IoLocationSharp } from "react-icons/io5";
 import { FaPhoneAlt } from "react-icons/fa";
 import { HiOutlineMail } from "react-icons/hi";
 import { motion } from "framer-motion";
 import { fadeIn } from "@/app/utils/motion";
+import type { ReachUsItem } from "@/app/lib/types";
 
-const ReachUs = () => {
+interface Props {
+  reachUsData : ReachUsItem[]
+}
+const ReachUs : React.FC<Props> = ({reachUsData}) => {
   return (
     <motion.div
       initial="hidden"
@@ -23,7 +26,7 @@ const ReachUs = () => {
         transition={{ duration: 0.4 }}
         className="lg:col-span-6 col-span-12"
       >
-        {ReachUsData.map((data, index) => (
+        {reachUsData?.map((data, index) => (
           <motion.div
             variants={fadeIn("up", "spring", 0.5 * index, 0.75)}
             key={index}

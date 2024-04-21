@@ -1,10 +1,16 @@
 "use client";
 import React from "react";
-import { GotQuestionData } from "./contactData";
 import Link from "next/link";
 import { motion } from "framer-motion";
 import { fadeIn, textVariant } from "@/app/utils/motion";
-const GotQuestion = () => {
+import type { GotQuestionItem } from "@/app/lib/types";
+
+interface Props {
+  gotQuestionData : GotQuestionItem[]
+}
+
+const GotQuestion : React.FC<Props> = ({gotQuestionData}) => {
+  // console.log("🚀 ~ gotQuestionData:", gotQuestionData)
   return (
     <motion.div
       initial="hidden"
@@ -13,7 +19,7 @@ const GotQuestion = () => {
       transition={{ duration: 0.5 }}
       className="mt-14 px-4"
     >
-      {GotQuestionData.map((data, index) => (
+      {gotQuestionData?.map((data, index) => (
         <motion.div
           key={index}
           variants={fadeIn("up", "spring", 0.05 * index, 0.75)}

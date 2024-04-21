@@ -103,3 +103,28 @@ export interface CompanyItems extends ServiceItem {
     alt: string;
   }
 }
+
+// Contact us page types
+export interface GotQuestionItem  {
+  heading: string;
+  paragraph: string;
+  number: string;
+  desc: string;
+  solution: string;
+}
+export interface ReachUsItem  {
+  heading: string;
+  address: string;
+  phone: string;
+  email: string;
+};
+export interface ContactSliderItem  {
+  url: string;
+  alt: string;
+};
+
+export interface ContactSliderData  {
+  title: string;
+  description: string;
+  contacts: ContactSliderItem[];
+};

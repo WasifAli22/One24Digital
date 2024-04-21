@@ -3,34 +3,16 @@ import React from "react";
 import { motion } from "framer-motion";
 import { fadeIn, textVariant } from "@/app/utils/motion";
 
-const OurReach = () => {
+interface Props {
+  cities: {
+    name: string;
+    address: string;
+  }[];
+}
+
+const OurReach : React.FC<Props> = ({cities}) => {
   // Sample data
-  const cities = [
-    {
-      name: "Maharashtra",
-      address:
-        "mravati, Aurangabad, Ichalkaranji, Jaisingpur, Jalgaon, Jalna, Karad, Kolhapur, Latur, Miraj, Mumbai, Nagpur, Nanded, Navi Mumbai, Osmanabad, Pune, Ratnagiri, Sangli, Satara, Solapur, Thane",
-    },
-    {
-      name: "Gujarat",
-      address:
-        "Ahmedabad, Anand, Baroda, Bhuj, Gandhinagar, Gandhidham, Mehsana, Nadiad, Rajkot, Surat, Valsad, Vapi",
-    },
-    { name: "Daman", address: "Daman" },
-    { name: "Telangana", address: "Hyderabad, Karimnagar, Khammam, Warangal" },
-    {
-      name: "Andhra Pradesh",
-      address:
-        "Eluru, Guntur, Kakinada, Kurnool, Nellore, Ongole, Rajamundhary, Tirupati, Tuni, Vijayawada, Visakhapatnam",
-    },
-    { name: "Karnataka", address: "Bengaluru, Belgaum" },
-    {
-      name: "Madhya Pradesh",
-      address: "Bhopal, Dewas, Indore, Ratlam, Ujjain",
-    },
-    { name: "Chhattisgarh", address: "Bhilai, Raipur" },
-    { name: "NCR", address: "Ghaziabad " },
-  ];
+ 
 
   return (
     <motion.section
@@ -60,7 +42,7 @@ const OurReach = () => {
           transition={{ duration: 0.17 }}
           className="border-gray-300 border-2"
         >
-          {cities.map((city, index) => (
+          {cities?.map((city, index) => (
             <motion.tr
               variants={fadeIn("down", "spring", 0.3 * index, 0.75)}
               key={index}

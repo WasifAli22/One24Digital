@@ -1,18 +1,10 @@
-// import { HttpLink } from "@apollo/client";
-// import {
-//   NextSSRInMemoryCache,
-//   NextSSRApolloClient,
-// } from "@apollo/experimental-nextjs-app-support/ssr";
-// import { registerApolloClient } from "@apollo/experimental-nextjs-app-support/rsc";
-// import { BASE_URL } from "./constant";
+// apollo-client.js
+import { ApolloClient, InMemoryCache } from "@apollo/client";
+import { BASE_URL } from "./constant";
 
-// export const { getClient } = registerApolloClient(() => {
-//   return new NextSSRApolloClient({
-//     cache: new NextSSRInMemoryCache(),
-//     link: new HttpLink({
-//       uri: `${BASE_URL}/api/graphql`,
-//     }) as any,
-//   });
-// });
+const client = new ApolloClient({
+  uri: "http://localhost:3000/api/graphql", // Replace with your actual GraphQL endpoint
+  cache: new InMemoryCache(),
+});
 
-export {}
+export default client;

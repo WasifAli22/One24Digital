@@ -1,6 +1,10 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
+import GraphQlProvider from "./lib/apollo-provider";
+import { Header , Footer } from "@/components";
+
+
 // import { Header } from "@/components";
 // import { ApolloWrapper } from "./lib/apollo-provider";
 // import Footer from "@/components/layout/Footer";
@@ -37,11 +41,11 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={inter.className}>
-        {/* <ApolloWrapper> */}
-          {/* <Header /> */}
-          {children}
-          {/* <Footer /> */}
-        {/* </ApolloWrapper> */}
+      <GraphQlProvider>
+        <Header />
+        {children}
+        <Footer />
+      </GraphQlProvider>
       </body>
     </html>
   );

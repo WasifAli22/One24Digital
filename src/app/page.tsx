@@ -1,6 +1,24 @@
 import { Banner, Compaign, TrendBanner } from "@/components";
 import LogoCarousel from "@/components/LogosCarasuel";
 import { BASE_URL } from "./lib/constant";
+import { Suspense } from "react";
+import dynamic from 'next/dynamic'
+// const DynamicHeader = dynamic(() => import('../components/header'), {
+//   ssr: false,
+// })
+const DynamicBanner = dynamic(() => import('@/components/Banner'),{
+  ssr: false
+})
+const DynamicCompaign = dynamic(() => import('@/components/Compaign'),{
+  ssr: false
+})
+const DynamicTrendBanner = dynamic(() => import('@/components/TrendBanner'),{
+  ssr: false
+})
+const DynamicLogoCarousel = dynamic(() => import('@/components/LogosCarasuel'),{
+  ssr: false
+})
+
 // import { getHome as query } from "./lib/queries";
 // import { getClient } from "./lib/client";
 
@@ -70,7 +88,7 @@ const getHomeData = async () => {
     const data = await res.json();
 
     // console.log("data of home", data?.data?.getHome?.morqueData);
-    return data
+    return data;
   } catch (error: any) {
     console.error("Error fetching website data:", error.message);
   }
@@ -81,12 +99,14 @@ export default async function Home() {
   // console.log("🚀 ~ Home ~ data:", data && data)
 
   return (
-    <div className="relative ">
-      <Banner bannerData={data?.data?.getHome?.bannerData} />
-      <Compaign testImages={data?.data?.getHome?.compaignSlider} />
-      <TrendBanner trendsData={data?.data?.getHome?.trendsData} />
-      <LogoCarousel morqueData={data?.data?.getHome?.morqueData} />
-    </div>
+    <Suspense fallback={<div>Loading...</div>} >
+      <div className="relative">
+        <DynamicBanner bannerData={data?.data?.getHome?.bannerData} />
+        <DynamicCompaign testImages={data?.data?.getHome?.compaignSlider} />
+        <DynamicTrendBanner trendsData={data?.data?.getHome?.trendsData} />
+        <DynamicLogoCarousel morqueData={data?.data?.getHome?.morqueData} />
+      </div>
+    </Suspense>
   );
 }
 

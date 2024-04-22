@@ -3,9 +3,7 @@ import LogoCarousel from "@/components/LogosCarasuel";
 import { BASE_URL } from "./lib/constant";
 import { Suspense } from "react";
 import dynamic from 'next/dynamic'
-// const DynamicHeader = dynamic(() => import('../components/header'), {
-//   ssr: false,
-// })
+
 const DynamicBanner = dynamic(() => import('@/components/Banner'),{
   ssr: false
 })

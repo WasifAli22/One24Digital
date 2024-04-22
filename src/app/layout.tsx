@@ -18,11 +18,11 @@ export const metadata: Metadata = {
   icons: {
     icon: [
       {
-        url: "/company-logos/One24OS-trans.png",
+        url: "/favicon.ico",
         media: "(prefers-color-scheme: light)",
       },
       {
-        url: "/company-logos/One24OS-trans.png",
+        url: "/favicon.ico",
         media: "(prefers-color-scheme: dark)",
       },
     ],

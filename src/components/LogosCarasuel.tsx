@@ -2,7 +2,6 @@
 
 // component.jsx
 import React from "react";
-import { morqueData } from "./mockApi";
 import Image from "next/image";
 // import { Marquee } from './layout/Morque';
 import "@devnomic/marquee/dist/index.css";

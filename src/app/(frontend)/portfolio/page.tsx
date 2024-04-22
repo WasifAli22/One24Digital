@@ -4,7 +4,7 @@ import PortfolioBanner from "@/components/portfolio/PortfolioBanner";
 import PortfolioCard from "@/components/portfolio/PortfolioCard";
 import { useQuery } from "@apollo/client";
 import { getPortfolio } from "@/app/lib/queries";
-import SkeletonService from "../test/page";
+import SkeletonService from "@/components/skeletons/PagSkeleton";
 
 
 const Portfolio =   () => {

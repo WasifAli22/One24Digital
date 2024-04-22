@@ -2,8 +2,8 @@ import React from "react";
 import { CompanyData } from "@/components";
 import Image from "next/image";
 import { BASE_URL } from "@/app/lib/constant";
-import SkeletonService from "../../test/page";
 import type { CompanyItems } from "@/app/lib/types";
+import SkeletonService from "@/components/skeletons/PagSkeleton";
 
 const getCompanyData = async () => {
   try {

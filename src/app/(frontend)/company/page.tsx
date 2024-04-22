@@ -4,7 +4,7 @@ import { getCompany } from "@/app/lib/queries";
 import CompanyBanner from "@/components/company/CompanyBanner";
 import CompanyCard from "@/components/company/CompanyCard";
 import { useQuery } from "@apollo/client";
-import SkeletonService from "../test/page";
+import SkeletonService from "@/components/skeletons/PagSkeleton";
 
 const Company = () => {
  

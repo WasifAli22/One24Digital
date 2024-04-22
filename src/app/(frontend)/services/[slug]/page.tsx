@@ -3,8 +3,8 @@ import React from 'react';
 import Image from 'next/image';
 // import { getServiceData } from '../page';
 import { ServiceItem } from '@/app/lib/types';
-import SkeletonService from '../../test/page';
 import { BASE_URL } from '@/app/lib/constant';
+import SkeletonService from '@/components/skeletons/PagSkeleton';
 
 const getServiceData = async () => {
     try {
